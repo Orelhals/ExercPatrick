@@ -1,6 +1,8 @@
+/*Fazer um programa para receber um número inteiro de segundos do usuário e imprimir
+a quantidade correspondente em horas, minutos e segundos.*/
+
 #include <stdio.h>
 
-/*exercicio 1*/
 int main (void)
 {
     int inputSec;
