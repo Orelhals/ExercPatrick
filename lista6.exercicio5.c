@@ -23,7 +23,7 @@ char *cifra_cesar(char *msg);
 int main(void)
 {
     char *mensagem =(char*) malloc(256 * sizeof(char));
-    if (mensagem==NULL) { printf("Falta memoria \n"); exit(1); }
+    if (mensagem == NULL) { printf("Falta memoria \n"); exit(1); }
       
     printf("digite uma palavra: \n");
     scanf("%s", &mensagem);
@@ -42,7 +42,7 @@ char *cifra_cesar(char *msg)
 {   
     int len = strlen(msg);
     char *cifrada = (char*) malloc((len + 1) * sizeof(char));
-    if (cifrada==NULL) { printf("Falta memoria \n"); exit(1); }
+    if (cifrada == NULL) { printf("Falta memoria \n"); exit(1); }
     
     for (int i = 0; i < len; i++) 
     {
