@@ -37,13 +37,13 @@ int main(void){
     bool chave = true;
     Candidato* candidatos;
 
-    printf("Digite o número de candidatos: ");
+    printf("Digite o nÃºmero de candidatos: ");
     scanf("%d", &n);
-    getchar(); // Limpa o '\n' do buffer após scanf
+    getchar(); // Limpa o '\n' do buffer apÃ³s scanf
 
     candidatos = (Candidato*) malloc(n * sizeof(Candidato));
     if (candidatos == NULL) {
-        printf("Erro ao alocar memória!\n");
+        printf("Erro ao alocar memÃ³ria!\n");
         return 1;
     }
 
@@ -51,7 +51,7 @@ int main(void){
 
     while (chave){
     printf("__________________________________________________________________\n");
-    printf("Caso queira ler dados dos candidatos escreva 1 ou se quiser imprimir, escreva 2. Além disso, caso queira mudar algum dado de candidato, escreva 3 e para encerrar essas opcoes escreva 4: ");
+    printf("Caso queira ler dados dos candidatos escreva 1 ou se quiser imprimir, escreva 2. AlÃ©m disso, caso queira mudar algum dado de candidato, escreva 3 e para encerrar essas opcoes escreva 4: ");
     scanf("%d",&op);
 
     switch (op){
@@ -59,14 +59,14 @@ int main(void){
         case 2: printar_candidatos(n,candidatos);
         case 3: mudar_dado(n,candidatos);
         case 4: mudar_dado_sala(n,candidatos);
-        case 5: printf("Ate a próxima!"); chave = false;
+        case 5: printf("Ate a prÃ³xima!"); chave = false;
     };
 
     };
 
 
 
-    // Liberação correta da memória
+    // LiberaÃ§Ã£o correta da memÃ³ria
     for (int i = 0; i < n; i++) {
         free(candidatos[i].loc);
     }
@@ -79,31 +79,31 @@ void lendo_candidatos(int n,Candidato* candidatos, bool chave){
 
     for (int i = 0; i < n; i++){
         printf("__________________________________________________________________\n");
-        printf("Esse é o candidato de numero %d\n",i+1);
+        printf("Esse Ã© o candidato de numero %d\n",i+1);
         printf("Digite seu numero de inscricao: ");
         scanf("%d",&candidatos[i].inscri);
         getchar();
 
         printf("Digite seu nome: ");
         fgets(candidatos[i].nome,sizeof(candidatos[i].nome),stdin);
-        candidatos[i].nome[strcspn(candidatos[i].nome, "\n")] = '\0'; // Dentro do nome colocado pelo o usuario, procuramos onde está o char que queremos e o que colocar no lugar. Colocamos \0 pra indicar o final da frase
+        candidatos[i].nome[strcspn(candidatos[i].nome, "\n")] = '\0'; // Dentro do nome colocado pelo o usuario, procuramos onde estÃ¡ o char que queremos e o que colocar no lugar. Colocamos \0 pra indicar o final da frase
 
         printf("Digite sua data de nascimento: ");
         scanf("%d %d %d",&candidatos[i].nasc.dia,&candidatos[i].nasc.mes,&candidatos[i].nasc.ano);
         getchar();
 
-        // Alocar memória para o ponteiro loc
+        // Alocar memÃ³ria para o ponteiro loc
         candidatos[i].loc = malloc(sizeof(Local));
         if (candidatos[i].loc == NULL) {
-            printf("Erro ao alocar memória para local!\n");
+            printf("Erro ao alocar memÃ³ria para local!\n");
             exit(1);
         }
 
-        printf("Digite o endereço: ");
+        printf("Digite o endereÃ§o: ");
         fgets(candidatos[i].loc->ender, sizeof(candidatos[i].loc->ender), stdin);
         candidatos[i].loc->ender[strcspn(candidatos[i].loc->ender, "\n")] = '\0';
 
-        printf("Digite o número da sala: ");
+        printf("Digite o nÃºmero da sala: ");
         scanf("%d", &candidatos[i].loc->sala);
         getchar(); // limpa o \n
 
