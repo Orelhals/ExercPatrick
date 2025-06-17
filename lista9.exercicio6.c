@@ -14,7 +14,7 @@ Pessoa* busca(int n, Pessoa** vet, int codigo) {
             return vet[i];
         }
     }
-    return NULL; // N„o encontrado
+    return NULL; // N√£o encontrado
 }
 
 void cadastre_pessoas(int n, int *v, char v_s[][81]) {
@@ -23,7 +23,7 @@ void cadastre_pessoas(int n, int *v, char v_s[][81]) {
         scanf("%d", &v[i]);
 
         printf("Digite o nome: ");
-        scanf(" %80[^\n]", v_s[i]);  // lÍ atÈ 80 caracteres com espaÁo
+        scanf(" %80[^\n]", v_s[i]);  // l√™ at√© 80 caracteres com espa√ßo
     }
 }
 
@@ -48,7 +48,7 @@ int main(void) {
         strcpy(nova_pessoa[i]->nome, v_s[i]);
     }
 
-    printf("Caso voce deseje buscar algum funcionario, digite o codigo dele. Caso n„o, digite 0: ");
+    printf("Caso voce deseje buscar algum funcionario, digite o codigo dele. Caso n√£o, digite 0: ");
     scanf("%d", &codigo);
 
     if (codigo != 0) {
