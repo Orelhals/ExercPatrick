@@ -14,7 +14,7 @@ typedef struct assalariados {
 } Assalariados;
 
 Assalariados * cadastra(char *nome, char sexo, int idade, float salario, char *estado){
-    Assalariados * novo = (Assalariados *) malloc (sizeof(Assalariados)); // para colocar informações no struct devemos primeiramente alocar memória para essas informações
+    Assalariados * novo = (Assalariados *) malloc (sizeof(Assalariados)); // para colocar informaÃ§Ãµes no struct devemos primeiramente alocar memÃ³ria para essas informaÃ§Ãµes
     if (novo == NULL){
         printf("Erro ao alocar memoria!");
         exit(1);
@@ -80,7 +80,7 @@ void relatorio(Assalariados ** ptr, int numAssalariados){
         }
         else{
             printf("_________________________________________________\n");
-            printf("Estado=%s com %d homens maiores de 40 anos e salário maior que R$ 1000,00\n",estado[i],quantidade);
+            printf("Estado=%s com %d homens maiores de 40 anos e salÃ¡rio maior que R$ 1000,00\n",estado[i],quantidade);
             quantidade = 0;
         };
 
