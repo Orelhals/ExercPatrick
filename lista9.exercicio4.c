@@ -12,9 +12,9 @@ void atribui(char **nomes, int indice, char *nome){
     strcpy(nomes[indice],nome); // recebe o nome pelo parametro *nome e depois passa para o char ** nomes.
 };
 char * get_sobrenome(char *nome){
-    char *recebe_sobrenome = (char *) malloc(MAXNOME); // aloca espaço suficiente
+    char *recebe_sobrenome = (char *) malloc(MAXNOME); // aloca espaÃ§o suficiente
     bool chave = false;
-    int j = 0; // índice para a nova string
+    int j = 0; // Ã­ndice para a nova string
 
     for (int i = 0; nome[i] != '\0'; i++) {
         if (nome[i] == ' ') {
